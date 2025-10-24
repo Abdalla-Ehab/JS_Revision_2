@@ -1,47 +1,93 @@
-body {
+:root{
+    --main-color: white;
+    --base-varient: #e8e9ed;
+    --text-color: black;
+    --secondary-text: #232728;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.darkmode{
+    --main-color: #070b1d;
+    --base-varient: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.body{
+    background-color: var(--main-color);
+}
+
+#theme-swtich{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-varient);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #f2f2f2;
-    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
-#studentsCard {
+#theme-swtich svg{
+    fill: var(--primary-color);
+}
+
+#theme-swtich svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-swtich svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-swtich svg:last-child{
+    display: block;
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 36px;
+    padding-left: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    height: 70px;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card {
-    width: 230px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s;
+nav ul{
+    list-style: none;
+    display: flex;
 }
 
-.card:hover {
-    transform: scale(1.05);
+nav ul li{
+    padding: 15px;
 }
 
-.card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 20%;
-    object-fit: cover;
-    margin-bottom: 10px;
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
 }
 
-h4 {
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-p {
-    color: #555;
-    font-size: 14px;
+nav ul li a:hover{
+    color: yellow;
 }
