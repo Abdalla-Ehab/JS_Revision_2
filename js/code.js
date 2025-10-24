@@ -62,7 +62,7 @@ console.log(students);
 // `;
 // }
 
-students.forEach( (s)=> {
+Team.forEach( (s)=> {
     document.getElementById("studentsCard").innerHTML += `
     <div class="card">
         <img src='${s.img}' style="width:150px">
